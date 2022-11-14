@@ -250,10 +250,11 @@ def main():
     os.makedirs(opt.outdir, exist_ok=True)
     outpath = opt.outdir
 
-    print("Creating invisible watermark encoder (see https://github.com/ShieldMnt/invisible-watermark)...")
-    wm = "StableDiffusionV1"
-    wm_encoder = WatermarkEncoder()
-    wm_encoder.set_watermark('bytes', wm.encode('utf-8'))
+#    print("Creating invisible watermark encoder (see https://github.com/ShieldMnt/invisible-watermark)...")
+#    wm = "StableDiffusionV1"
+    wm_encoder = None
+#    wm_encoder = WatermarkEncoder()
+#    wm_encoder.set_watermark('bytes', wm.encode('utf-8'))
 
     batch_size = opt.n_samples
     n_rows = opt.n_rows if opt.n_rows > 0 else batch_size
