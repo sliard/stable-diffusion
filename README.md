@@ -19,6 +19,7 @@ this model uses a frozen CLIP ViT-L/14 text encoder to condition the model on te
 With its 860M UNet and 123M text encoder, the model is relatively lightweight and runs on a GPU with at least 10GB VRAM.
 See [this section](#stable-diffusion-v1) below and the [model card](https://huggingface.co/CompVis/stable-diffusion).
 
+Add Ram optimisedSD : https://github.com/basujindal/stable-diffusion
   
 ## Requirements
 A suitable [conda](https://conda.io/) environment named `ldm` can be created
