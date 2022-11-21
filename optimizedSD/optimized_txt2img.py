@@ -168,6 +168,11 @@ parser.add_argument(
     default="plms",
 )
 parser.add_argument(
+    "--plms",
+    action='store_true',
+    help="not used - only for compatibility",
+)
+parser.add_argument(
     "--ckpt",
     type=str,
     help="path to checkpoint of model",
