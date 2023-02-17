@@ -51,8 +51,11 @@ def load_model_from_config(config, ckpt, verbose=False):
     if "global_step" in pl_sd:
         print(f"Global Step: {pl_sd['global_step']}")
 
-    print(pl_sd.keys())
-    sd = pl_sd["state_dict"]
+    #print(pl_sd.keys())
+    if "state_dict" in pl_sd:
+        sd = pl_sd["state_dict"]
+    else:
+        sd = pl_sd
 
     model = instantiate_from_config(config.model)
     m, u = model.load_state_dict(sd, strict=False)
